@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Demo | KT Rentals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <header class="border-b border-white/10 bg-slate-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl flex-col items-start gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <a href="./index.html" class="text-xl font-semibold tracking-wide text-white">KT Rentals</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-3 py-6 sm:px-6 sm:py-10 lg:px-8">
+    <div class="grid gap-6 grid-cols-1 lg:grid-cols-[0.9fr_1.1fr]">
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-8">
+        <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Secure checkout</p>
+        <h1 class="mt-3 text-3xl font-semibold text-white">Review your booking</h1>
+        <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+          <p class="text-xl font-semibold text-white">Toyota RAV4</p>
+          <div class="mt-4 space-y-2 text-sm text-slate-300">
+            <div class="flex items-center justify-between"><span>Pickup</span><span>2026-07-20</span></div>
+            <div class="flex items-center justify-between"><span>Dropoff</span><span>2026-07-23</span></div>
+            <div class="flex items-center justify-between"><span>Days</span><span>3</span></div>
+            <div class="flex items-center justify-between"><span>Total</span><span>GHS 285</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-xl shadow-black/20">
+        <div class="space-y-4">
+          <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Payment step</p>
+          <p class="text-sm text-slate-400">This demo simulates a secure online payment experience. The real gateway connection can be added later.</p>
+          <form class="space-y-4">
+            <div>
+              <label class="mb-2 block text-sm text-slate-300">Cardholder name</label>
+              <input type="text" value="Ada Mensah" class="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-slate-100" />
+            </div>
+            <div>
+              <label class="mb-2 block text-sm text-slate-300">Card number</label>
+              <input type="text" value="4242 4242 4242 4242" class="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-slate-100" />
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="mb-2 block text-sm text-slate-300">Expiry</label>
+                <input type="text" value="12/28" class="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-slate-100" />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm text-slate-300">CVV</label>
+                <input type="text" value="123" class="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-slate-100" />
+              </div>
+            </div>
+            <a href="./index.html" class="block w-full rounded-full bg-blue-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-blue-700">Complete Payment</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Demo | KT Rentals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="min-h-full bg-slate-950 text-slate-100">
+  <header class="border-b border-white/10 bg-slate-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl flex-col items-start gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <a href="./index.html" class="text-xl font-semibold tracking-wide text-white">KT Rentals Admin Demo</a>
+      <a href="./index.html" class="rounded-full border border-white/10 px-3 py-1 text-sm text-slate-300 transition hover:text-white">Exit Demo</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-3 py-6 sm:px-6 sm:py-10 lg:px-8">
+    <div class="mb-6 sm:mb-8">
+      <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Operations center</p>
+      <h1 class="mt-2 text-3xl font-semibold text-white">Admin dashboard overview</h1>
+    </div>
+
+    <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6"><p class="text-sm text-slate-400">Today</p><p class="mt-2 text-2xl font-semibold text-white sm:text-3xl">GHS 2,840</p></div>
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6"><p class="text-sm text-slate-400">This month</p><p class="mt-2 text-2xl font-semibold text-white sm:text-3xl">GHS 18,950</p></div>
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6"><p class="text-sm text-slate-400">This year</p><p class="mt-2 text-2xl font-semibold text-white sm:text-3xl">GHS 126,540</p></div>
+    </section>
+
+    <section class="mt-8 grid gap-6 grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white">Revenue trend</h2>
+          <span class="text-sm text-slate-400">Current calendar year</span>
+        </div>
+        <div class="h-64 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+          <canvas id="revenueChart" class="h-full w-full"></canvas>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6">
+        <h2 class="text-xl font-semibold text-white">Active bookings</h2>
+        <div class="mt-4 overflow-x-auto">
+          <table class="min-w-full text-left text-sm text-slate-300">
+            <thead><tr class="border-b border-white/10 text-slate-400"><th class="py-3">Customer</th><th class="py-3">Vehicle</th><th class="py-3">Status</th></tr></thead>
+            <tbody>
+              <tr class="border-b border-white/10"><td class="py-3">Ada Mensah</td><td class="py-3">Toyota RAV4</td><td class="py-3">Approved</td></tr>
+              <tr class="border-b border-white/10"><td class="py-3">Kwame Boateng</td><td class="py-3">Honda Civic</td><td class="py-3">Ongoing</td></tr>
+              <tr class="border-b border-white/10"><td class="py-3">Nana Afia</td><td class="py-3">Mercedes S-Class</td><td class="py-3">Pending</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8 rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-xl shadow-black/20 sm:p-6">
+      <div class="mb-6 flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <h2 class="text-xl font-semibold text-white">Fleet control</h2>
+        <button class="w-full rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-300 transition hover:text-white sm:w-auto">Add Vehicle</button>
+      </div>
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+          <h3 class="text-lg font-semibold text-white">Toyota RAV4</h3>
+          <p class="mt-2 text-sm text-slate-400">SUV • Automatic • Petrol</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-slate-300"><span>GHS 95/day</span><span>Available</span></div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+          <h3 class="text-lg font-semibold text-white">Honda Civic</h3>
+          <p class="mt-2 text-sm text-slate-400">Economy • Automatic • Petrol</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-slate-300"><span>GHS 70/day</span><span>Available</span></div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+          <h3 class="text-lg font-semibold text-white">Mercedes S-Class</h3>
+          <p class="mt-2 text-sm text-slate-400">Luxury • Automatic • Diesel</p>
+          <div class="mt-4 flex items-center justify-between text-sm text-slate-300"><span>GHS 180/day</span><span>Maintenance</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const ctx = document.getElementById('revenueChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+          datasets: [{ label: 'Revenue', data: [4200, 5100, 5600, 6100, 5900, 7400, 8200, 7800, 9100, 9800, 10700, 11800], backgroundColor: 'rgba(59,130,246,0.85)', borderRadius: 8 }]
+        },
+        options: { animation: false, responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { color: '#94a3b8' } }, x: { ticks: { color: '#94a3b8' } } } }
+      });
+    }
+  </script>
+</body>
+</html>
